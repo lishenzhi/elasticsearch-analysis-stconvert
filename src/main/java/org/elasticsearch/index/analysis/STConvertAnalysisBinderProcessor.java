@@ -52,4 +52,9 @@ public class STConvertAnalysisBinderProcessor extends AnalysisModule.AnalysisBin
     public void processTokenFilters(TokenFiltersBindings tokenFiltersBindings) {
         tokenFiltersBindings.processTokenFilter("stconvert", STConvertTokenFilterFactory.class);
     }
+
+    @Override
+    public void processCharFilters(CharFiltersBindings CharFiltersBindings) {
+        CharFiltersBindings.processCharFilter("stconvert", STConvertCharFilterFactory.class);
+    }
 }
